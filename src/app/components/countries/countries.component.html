@@ -1,0 +1,50 @@
+<label>Search : </label>
+<input [(ngModel)]="textToSearch" (ngModelChange)="startSearch()"/>
+
+<div *ngIf="countries && !searchingCountries">
+    <table *ngIf="countries && !searchingCountries">
+        <tr>
+            <th>Name</th>
+            <th>Native Name</th>
+            <th>Capital</th>
+            <th>Population</th>
+            <th>Flag</th>
+        </tr>
+        <tr *ngFor="let c of countries">
+            <td>{{c.name}}</td>
+            <td>{{c.nativeName}}</td>
+            <td>{{c.capital}}</td>
+            <td>{{c.population}}</td>
+            <td>
+                <app-thumbnail imageSource="{{c.flag}}" imageWidth="80" imageHeight="50"></app-thumbnail>
+            </td> 
+
+        </tr>
+    </table>
+</div>  
+
+<div *ngIf="searchingCountries" >
+    <table >
+        <tr>
+            <th>Name</th>
+            <th>Native Name</th>
+            <th>Capital</th>
+            <th>Population</th>
+            <th>Flag</th>
+        </tr>
+        <tr *ngFor="let c of searchingCountries">
+            <td>{{c.name}}</td>
+            <td>{{c.nativeName}}</td>
+            <td>{{c.capital}}</td>
+            <td>{{c.population}}</td>
+            <td>
+                <app-thumbnail imageSource="{{c.flag}}" imageWidth="80" imageHeight="50"></app-thumbnail>
+            </td> 
+
+        </tr>
+    </table>
+</div> 
+
+
+
+

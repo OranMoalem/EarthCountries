@@ -1,1 +1,39 @@
 /* You can add global styles to this file, and also import other style files */
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    font-size: x-large;
+    background-color: #DCDCDC;
+}
+
+main {
+    background-color: #DCDCDC;
+}
+
+a {
+    color: blue;
+}
+
+@font-face {
+    font-family: inco;
+    src: url(assets/fonts/Inconsolata/Inconsolata-Regular.ttf);
+}
+
+@font-face {
+    font-family: ubuntu;
+    src: url(/fonts/Ubuntu/Ubuntu-Light.ttf);
+    src: url(assets/fonts/Ubuntu/Ubuntu-Light.ttf);
+}
+
+@font-face {
+    font-family: play;
+    src: url(assets/fonts/Playfair_Display/static/PlayfairDisplay-Regular.ttf);
+}
+
+* {
+    /* font-family: play, serif; */
+    /* font-family: inco, monospace; */
+    font-family: ubuntu, sans-serif; 
+}
